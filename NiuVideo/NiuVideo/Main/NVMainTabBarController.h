@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  NVMainTabBarController.h
 //  NiuVideo
 //
 //  Created by suntongmian on 2017/12/1.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface NVMainTabBarController : UITabBarController
 
 
 @end

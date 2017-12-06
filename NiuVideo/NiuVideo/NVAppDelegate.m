@@ -1,22 +1,30 @@
 //
-//  AppDelegate.m
+//  NVAppDelegate.m
 //  NiuVideo
 //
 //  Created by suntongmian on 2017/12/1.
 //  Copyright © 2017年 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
-#import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import "NVAppDelegate.h"
+#import "NVLoginViewController.h"
+#import "NVMainTabBarController.h"
+@interface NVAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation NVAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    NVMainTabBarController *mainTabBarController = [[NVMainTabBarController alloc]init];
+    self.window.rootViewController = mainTabBarController;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
