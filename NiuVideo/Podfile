@@ -2,5 +2,8 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 
 target 'NiuVideo' do
-
+pod 'CocoaLumberjack', '3.3.0'
+pod 'PLShortVideoKit', '1.7.0'
+pod 'PLMediaStreamingKit', '2.2.5'
+pod 'PLPlayerKit', '3.1.0'
 end

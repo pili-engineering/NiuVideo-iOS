@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NVAppDelegate.h
 //  NiuVideo
 //
 //  Created by suntongmian on 2017/12/1.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface NVAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 
 @end
