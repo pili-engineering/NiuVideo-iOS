@@ -17,13 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setUpNavigationItem];
+    [self setupNavigationItem];
 }
 
-- (void)setUpNavigationItem {
+- (void)setupNavigationItem {
     self.navigationItem.title = @"个人中心";
     
-    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
     self.navigationItem.rightBarButtonItem = rightBarButton;
     self.navigationItem.rightBarButtonItem.tintColor = NV_BLACK_COLOR;
 }
@@ -32,6 +32,10 @@
 
 - (void)rightBarButtonAction {
     
+}
+
+- (void)dealloc {
+    NSLog(@"dealloc: %@", [[self class] description]);
 }
 
 - (void)didReceiveMemoryWarning {

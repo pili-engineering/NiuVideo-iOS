@@ -18,10 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    NVMainTabBarController *mainTabBarController = [[NVMainTabBarController alloc]init];
+    NVMainTabBarController *mainTabBarController = [[NVMainTabBarController alloc] init];
     self.window.rootViewController = mainTabBarController;
     
     [self.window makeKeyAndVisible];

@@ -17,11 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setUpNavigationItem];
+    [self setupNavigationItem];
 }
 
-- (void)setUpNavigationItem {
+- (void)setupNavigationItem {
     self.navigationItem.title = @"文件";
+}
+
+- (void)dealloc {
+    NSLog(@"dealloc: %@", [[self class] description]);
 }
 
 - (void)didReceiveMemoryWarning {

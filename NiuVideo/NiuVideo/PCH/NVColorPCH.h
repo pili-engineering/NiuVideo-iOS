@@ -15,6 +15,8 @@
 
 // 黑色
 #define NV_BLACK_COLOR NV_COLOR_RGBA(0, 0, 0, 1)
+// 白色
+#define NV_WHITE_COLOR NV_COLOR_RGBA(255, 255, 255, 1)
 
 // 灰色透明
 #define NV_BLACK_POP_COLOR NV_COLOR_RGBA(209, 207, 205, 0.33)

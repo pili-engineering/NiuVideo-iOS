@@ -28,41 +28,41 @@ NVSelectClassViewDelegate
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self setUpMainTabBar];
+    [self setupMainTabBar];
 }
 
-- (void)setUpMainTabBar {
+- (void)setupMainTabBar {
     // 短视频
-    NVShortVideoViewController *shortVideoVc = [[NVShortVideoViewController alloc]init];
-    UINavigationController *shortVideoNav = [[UINavigationController alloc] initWithRootViewController:shortVideoVc];
+    NVShortVideoViewController *shortVideoVC = [[NVShortVideoViewController alloc] init];
+    UINavigationController *shortVideoNav = [[UINavigationController alloc] initWithRootViewController:shortVideoVC];
     shortVideoNav.tabBarItem.title = @"短视频";
     shortVideoNav.tabBarItem.tag = 0;
     shortVideoNav.tabBarItem.image = [UIImage imageNamed:@"short_video_icon"];
     
     // 直播
-    NVLiveStreamViewController *liveStreamVc = [[NVLiveStreamViewController alloc]init];
-    UINavigationController *liveStreamNav = [[UINavigationController alloc] initWithRootViewController:liveStreamVc];
+    NVLiveStreamViewController *liveStreamVC = [[NVLiveStreamViewController alloc] init];
+    UINavigationController *liveStreamNav = [[UINavigationController alloc] initWithRootViewController:liveStreamVC];
     liveStreamNav.tabBarItem.title = @"直播";
     liveStreamNav.tabBarItem.tag = 1;
     liveStreamNav.tabBarItem.image = [UIImage imageNamed:@"live"];
     
     // 发布
-    UIViewController *publishVc = [[UIViewController alloc]init];
-    UINavigationController *publishNav = [[UINavigationController alloc] initWithRootViewController:publishVc];
+    UIViewController *publishVC = [[UIViewController alloc] init];
+    UINavigationController *publishNav = [[UINavigationController alloc] initWithRootViewController:publishVC];
     publishNav.tabBarItem.title = @"发布";
     publishNav.tabBarItem.tag = 2;
     publishNav.tabBarItem.image = [UIImage imageNamed:@"release"];
     
     // 文件
-    NVFileManagerViewController *fileManagerVc = [[NVFileManagerViewController alloc]init];
-    UINavigationController *fileManagerNav = [[UINavigationController alloc] initWithRootViewController:fileManagerVc];
+    NVFileManagerViewController *fileManagerVC = [[NVFileManagerViewController alloc] init];
+    UINavigationController *fileManagerNav = [[UINavigationController alloc] initWithRootViewController:fileManagerVC];
     fileManagerNav.tabBarItem.title = @"文件";
     fileManagerNav.tabBarItem.tag = 3;
     fileManagerNav.tabBarItem.image = [UIImage imageNamed:@"document"];
     
     // 用户
-    NVUserConfigViewController *userConfigVc = [[NVUserConfigViewController alloc]init];
-    UINavigationController *userConfigNav = [[UINavigationController alloc] initWithRootViewController:userConfigVc];
+    NVUserConfigViewController *userConfigVC = [[NVUserConfigViewController alloc] init];
+    UINavigationController *userConfigNav = [[UINavigationController alloc] initWithRootViewController:userConfigVC];
     userConfigNav.tabBarItem.title = @"用户";
     userConfigNav.tabBarItem.tag = 4;
     userConfigNav.tabBarItem.image = [UIImage imageNamed:@"user"];
@@ -76,12 +76,9 @@ NVSelectClassViewDelegate
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     if (viewController == self.viewControllers[2]) {
-        self.tabBar.hidden = YES;
-        
-        NVSelectClassView *selectClassView = [[NVSelectClassView alloc]initWithFrame:CGRectZero superView:self.view];
+        NVSelectClassView *selectClassView = [[NVSelectClassView alloc] initWithFrame:CGRectZero superView:self.view];
         selectClassView.delegate = self;
         [selectClassView popSelectClassView];
-        
         return NO;
     }
     return YES;
@@ -89,7 +86,6 @@ NVSelectClassViewDelegate
 
 #pragma mark ---- NVSelectClassViewDelegate ----
 - (void)classView:(NVSelectClassView *)classView didSelectedIndex:(NSInteger)index {
-    self.tabBar.hidden = NO;
     [classView cancelSelectClassView];
     if (index == 0) {
         // 短视频
@@ -98,9 +94,10 @@ NVSelectClassViewDelegate
     }
 }
 
-- (void)classView:(NVSelectClassView *)classView selectedCloseButton:(UIButton *)closeButton {
-    self.tabBar.hidden = NO;
+- (void)dealloc {
+    NSLog(@"dealloc: %@", [[self class] description]);
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

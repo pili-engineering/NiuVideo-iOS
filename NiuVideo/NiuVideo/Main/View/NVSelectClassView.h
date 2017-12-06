@@ -10,6 +10,7 @@
 @class NVSelectClassView;
 @protocol NVSelectClassViewDelegate <NSObject>
 
+@optional
 /**
  点击 NVSelectClassView 按钮的回调
  
@@ -18,13 +19,6 @@
  */
 - (void)classView:(NVSelectClassView *)classView didSelectedIndex:(NSInteger)index;
 
-/**
- 取消的回调
- 
- @param classView NVSelectClassView 的实例
- @param closeButton 取消按钮
- */
-- (void)classView:(NVSelectClassView *)classView selectedCloseButton:(UIButton *)closeButton;
 @end
 
 @interface NVSelectClassView : UIView

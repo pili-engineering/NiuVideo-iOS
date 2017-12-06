@@ -18,17 +18,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setUpNavigationItem];
+    [self setupNavigationItem];
 }
 
-- (void)setUpNavigationItem {
+- (void)setupNavigationItem {
     self.navigationItem.title = @"直播";
     
-    UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"qr_code"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonAction)];
+    UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qr_code"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonAction)];
     self.navigationItem.leftBarButtonItem = leftBarButton;
     self.navigationItem.leftBarButtonItem.tintColor = NV_BLACK_COLOR;
     
-    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"url_link"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"url_link"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
     self.navigationItem.rightBarButtonItem = rightBarButton;
     self.navigationItem.rightBarButtonItem.tintColor = NV_BLACK_COLOR;
 }
@@ -43,6 +43,10 @@
 
 - (void)rightBarButtonAction {
     
+}
+
+- (void)dealloc {
+    NSLog(@"dealloc: %@", [[self class] description]);
 }
 
 - (void)didReceiveMemoryWarning {
