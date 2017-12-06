@@ -112,6 +112,10 @@
     }];
 }
 
+- (void)dealloc {
+    NSLog(@"dealloc: %@", [[self class] description]);
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

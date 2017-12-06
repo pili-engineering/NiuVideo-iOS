@@ -23,7 +23,7 @@
 - (void)setupNavigationItem {
     self.navigationItem.title = @"个人中心";
     
-    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"user_set"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
     self.navigationItem.rightBarButtonItem = rightBarButton;
     self.navigationItem.rightBarButtonItem.tintColor = NV_BLACK_COLOR;
 }
