@@ -21,6 +21,7 @@ PODS:
   - CocoaLumberjack/Extensions (3.3.0):
     - CocoaLumberjack/Default
   - HappyDNS (0.3.10)
+  - Masonry (1.1.0)
   - pili-librtmp (1.0.7)
   - PLMediaStreamingKit (2.2.5):
     - HappyDNS (= 0.3.10)
@@ -73,6 +74,7 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack (= 3.3.0)
+  - Masonry (= 1.1.0)
   - PLMediaStreamingKit (= 2.2.5)
   - PLPlayerKit (= 3.1.0)
   - PLShortVideoKit (= 1.7.0)
@@ -81,6 +83,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   pili-librtmp: e8a06a45b0a1a166c48ae6dc718171c0963f32ea
   PLMediaStreamingKit: b272e6e4f873b31ac5b32771d4cffe48f6133fce
   PLPlayerKit: e5c6c32b63ca674e3f31278f1a5be7e9f02022d8
@@ -88,6 +91,6 @@ SPEC CHECKSUMS:
   Qiniu: 56ea8b9d785326e45e3a6fdd45bdbc84f78d0eff
   QNNetDiag: 6f7bbafa34c1b020e51d440f25044fe5ee10145d
 
-PODFILE CHECKSUM: 87ef4a8ac5911322a4d77bc6281700d6ade8307f
+PODFILE CHECKSUM: 50d89b56319de56a8f4f3cea8c4edff68607be72
 
 COCOAPODS: 1.3.1
