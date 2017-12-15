@@ -5,7 +5,7 @@ target 'NiuVideo' do
 pod 'CocoaLumberjack', '3.3.0'
 pod 'Masonry', '1.1.0'
 
-pod 'PLShortVideoKit', '1.7.0'
+pod 'PLShortVideoKit/ex-libMuseProcessor', '1.7.0'
 pod 'PLMediaStreamingKit', '2.2.5'
 pod 'PLPlayerKit', '3.1.0'
 end
