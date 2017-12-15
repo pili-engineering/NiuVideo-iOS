@@ -12,6 +12,10 @@
 		0A23BC5D1FD13E9100382174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A23BC5C1FD13E9100382174 /* Assets.xcassets */; };
 		0A23BC601FD13E9100382174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A23BC5E1FD13E9100382174 /* LaunchScreen.storyboard */; };
 		0A23BC631FD13E9100382174 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A23BC621FD13E9100382174 /* main.m */; };
+		761782771FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */; };
+		7617827B1FE10AAA0010EFE6 /* NVLiveUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */; };
+		76FDC5921FE3703400F19C67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDC5911FE3703400F19C67 /* ViewController.m */; };
+		76FDC5951FE3713500F19C67 /* NVLivePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */; };
 		BBC951B9F8B1444045171998 /* libPods-NiuVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E2A862E04702DD16F5E5AD /* libPods-NiuVideo.a */; };
 		C317E5CC1FD689390065EA13 /* NVFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C317E5CB1FD689390065EA13 /* NVFileManagerViewController.m */; };
 		C317E5D01FD690650065EA13 /* NVUserConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C317E5C91FD689040065EA13 /* NVUserConfigViewController.m */; };
@@ -34,6 +38,14 @@
 		25E4DFBCBD39986F4693B10E /* Pods-NiuVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiuVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiuVideo/Pods-NiuVideo.release.xcconfig"; sourceTree = "<group>"; };
 		638D46359546FB5F0509431E /* Pods-NiuVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiuVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiuVideo/Pods-NiuVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		75E2A862E04702DD16F5E5AD /* libPods-NiuVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NiuVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		761782751FE0FA770010EFE6 /* NVLiveStreamTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveStreamTableViewCell.h; sourceTree = "<group>"; };
+		761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveStreamTableViewCell.m; sourceTree = "<group>"; };
+		761782791FE10AAA0010EFE6 /* NVLiveUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveUserModel.h; sourceTree = "<group>"; };
+		7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveUserModel.m; sourceTree = "<group>"; };
+		76FDC5901FE3703400F19C67 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		76FDC5911FE3703400F19C67 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		76FDC5931FE3713500F19C67 /* NVLivePreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLivePreviewViewController.h; sourceTree = "<group>"; };
+		76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLivePreviewViewController.m; sourceTree = "<group>"; };
 		C317E5C81FD689040065EA13 /* NVUserConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVUserConfigViewController.h; sourceTree = "<group>"; };
 		C317E5C91FD689040065EA13 /* NVUserConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVUserConfigViewController.m; sourceTree = "<group>"; };
 		C317E5CA1FD689390065EA13 /* NVFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVFileManagerViewController.h; sourceTree = "<group>"; };
@@ -122,6 +134,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		761782741FE0FA260010EFE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				761782751FE0FA770010EFE6 /* NVLiveStreamTableViewCell.h */,
+				761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		761782781FE104530010EFE6 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				761782791FE10AAA0010EFE6 /* NVLiveUserModel.h */,
+				7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		C317E5B71FD689030065EA13 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				C317E5EB1FD79D0E0065EA13 /* Controller */,
+				761782741FE0FA260010EFE6 /* View */,
+				761782781FE104530010EFE6 /* DataModel */,
 			);
 			path = "PILI-LiveStream";
 			sourceTree = "<group>";
@@ -197,6 +229,10 @@
 			children = (
 				C317E5EC1FD79D0E0065EA13 /* NVLiveStreamViewController.h */,
 				C317E5ED1FD79D0E0065EA13 /* NVLiveStreamViewController.m */,
+				76FDC5901FE3703400F19C67 /* ViewController.h */,
+				76FDC5911FE3703400F19C67 /* ViewController.m */,
+				76FDC5931FE3713500F19C67 /* NVLivePreviewViewController.h */,
+				76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -401,9 +437,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C317E5F21FD79D2E0065EA13 /* NVShortVideoViewController.m in Sources */,
+				76FDC5951FE3713500F19C67 /* NVLivePreviewViewController.m in Sources */,
+				761782771FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m in Sources */,
 				C317E5F31FD79D2E0065EA13 /* NVLiveStreamViewController.m in Sources */,
+				7617827B1FE10AAA0010EFE6 /* NVLiveUserModel.m in Sources */,
 				C317E5E01FD6B9FE0065EA13 /* NVMainTabBarController.m in Sources */,
 				C317E5E11FD6B9FE0065EA13 /* NVSelectClassView.m in Sources */,
+				76FDC5921FE3703400F19C67 /* ViewController.m in Sources */,
 				C317E5E51FD6BB320065EA13 /* NVLoginViewController.m in Sources */,
 				C317E5D01FD690650065EA13 /* NVUserConfigViewController.m in Sources */,
 				0A23BC631FD13E9100382174 /* main.m in Sources */,
@@ -544,7 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2TP34G2MM;
+				DEVELOPMENT_TEAM = ZP3LPA9D5W;
 				GCC_PREFIX_HEADER = NiuVideo/PCH/NiuVideoPCH.h;
 				INFOPLIST_FILE = NiuVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -561,7 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2TP34G2MM;
+				DEVELOPMENT_TEAM = ZP3LPA9D5W;
 				GCC_PREFIX_HEADER = NiuVideo/PCH/NiuVideoPCH.h;
 				INFOPLIST_FILE = NiuVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
