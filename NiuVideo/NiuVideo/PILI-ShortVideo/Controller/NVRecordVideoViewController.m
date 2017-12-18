@@ -8,7 +8,7 @@
 
 #import "NVRecordVideoViewController.h"
 #import "NVProcessVideoViewController.h"
-
+#import <AVFoundation/AVFoundation.h>
 #define NV_RECORD_Y_SPACE 64
 #define NV_RECORD_BUTTON_WIDTH (80.f * NV_WIDTH_RATIO)
 
@@ -152,6 +152,10 @@
         [button setImageEdgeInsets:UIEdgeInsetsMake(0, 5, 16, 0)];
         [button setTitleEdgeInsets:UIEdgeInsetsMake(28, -21, 0, 0)];
     }
+}
+
+- (void)backButtonAction:(UIButton *)backButton {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 // 录制相关设置
