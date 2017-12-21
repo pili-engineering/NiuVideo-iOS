@@ -30,6 +30,11 @@
 		C317E5E51FD6BB320065EA13 /* NVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C317E5E41FD6BB320065EA13 /* NVLoginViewController.m */; };
 		C317E5F21FD79D2E0065EA13 /* NVShortVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C317E5F11FD79D0E0065EA13 /* NVShortVideoViewController.m */; };
 		C317E5F31FD79D2E0065EA13 /* NVLiveStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C317E5ED1FD79D0E0065EA13 /* NVLiveStreamViewController.m */; };
+		C3424BAC1FE377C700A582B6 /* NVProcessVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3424BA61FE377C600A582B6 /* NVProcessVideoViewController.m */; };
+		C3424BAD1FE377C700A582B6 /* NVRecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3424BA71FE377C600A582B6 /* NVRecordVideoViewController.m */; };
+		C3424BAE1FE377C700A582B6 /* NVPublishVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3424BAA1FE377C600A582B6 /* NVPublishVideoViewController.m */; };
+		C3424BB81FE378AB00A582B6 /* NVButtonRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3424BB41FE3782800A582B6 /* NVButtonRowView.m */; };
+		C3424BB91FE378AB00A582B6 /* NVMusicListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3424BB61FE3782800A582B6 /* NVMusicListView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +83,16 @@
 		C317E5ED1FD79D0E0065EA13 /* NVLiveStreamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveStreamViewController.m; sourceTree = "<group>"; };
 		C317E5F01FD79D0E0065EA13 /* NVShortVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVShortVideoViewController.h; sourceTree = "<group>"; };
 		C317E5F11FD79D0E0065EA13 /* NVShortVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVShortVideoViewController.m; sourceTree = "<group>"; };
+		C3424BA61FE377C600A582B6 /* NVProcessVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVProcessVideoViewController.m; sourceTree = "<group>"; };
+		C3424BA71FE377C600A582B6 /* NVRecordVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVRecordVideoViewController.m; sourceTree = "<group>"; };
+		C3424BA81FE377C600A582B6 /* NVProcessVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVProcessVideoViewController.h; sourceTree = "<group>"; };
+		C3424BA91FE377C600A582B6 /* NVPublishVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVPublishVideoViewController.h; sourceTree = "<group>"; };
+		C3424BAA1FE377C600A582B6 /* NVPublishVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVPublishVideoViewController.m; sourceTree = "<group>"; };
+		C3424BAB1FE377C700A582B6 /* NVRecordVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVRecordVideoViewController.h; sourceTree = "<group>"; };
+		C3424BB31FE3782800A582B6 /* NVButtonRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVButtonRowView.h; sourceTree = "<group>"; };
+		C3424BB41FE3782800A582B6 /* NVButtonRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVButtonRowView.m; sourceTree = "<group>"; };
+		C3424BB51FE3782800A582B6 /* NVMusicListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVMusicListView.h; sourceTree = "<group>"; };
+		C3424BB61FE3782800A582B6 /* NVMusicListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVMusicListView.m; sourceTree = "<group>"; };
 		C37316C51FD683E500228D6D /* NiuVideoPCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiuVideoPCH.h; sourceTree = "<group>"; };
 		C37316C61FD683E500228D6D /* NVColorPCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVColorPCH.h; sourceTree = "<group>"; };
 		C37316C71FD683E500228D6D /* NVHttpPCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVHttpPCH.h; sourceTree = "<group>"; };
@@ -288,8 +303,25 @@
 			children = (
 				C317E5F01FD79D0E0065EA13 /* NVShortVideoViewController.h */,
 				C317E5F11FD79D0E0065EA13 /* NVShortVideoViewController.m */,
+				C3424BAB1FE377C700A582B6 /* NVRecordVideoViewController.h */,
+				C3424BA71FE377C600A582B6 /* NVRecordVideoViewController.m */,
+				C3424BA81FE377C600A582B6 /* NVProcessVideoViewController.h */,
+				C3424BA61FE377C600A582B6 /* NVProcessVideoViewController.m */,
+				C3424BA91FE377C600A582B6 /* NVPublishVideoViewController.h */,
+				C3424BAA1FE377C600A582B6 /* NVPublishVideoViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C3424BB21FE3782800A582B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3424BB31FE3782800A582B6 /* NVButtonRowView.h */,
+				C3424BB41FE3782800A582B6 /* NVButtonRowView.m */,
+				C3424BB51FE3782800A582B6 /* NVMusicListView.h */,
+				C3424BB61FE3782800A582B6 /* NVMusicListView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C37316C41FD683E500228D6D /* PCH */ = {
@@ -308,7 +340,7 @@
 				C37316CB1FD683E500228D6D /* Category */,
 				C37316CC1FD683E500228D6D /* Extension */,
 				C37316CD1FD683E500228D6D /* Network */,
-				C37316CE1FD683E500228D6D /* Views */,
+				C3424BB21FE3782800A582B6 /* Views */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -332,13 +364,6 @@
 			children = (
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		C37316CE1FD683E500228D6D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C37316CF1FD683E600228D6D /* Login */ = {
@@ -476,11 +501,14 @@
 			files = (
 				769B296E1FE3B2A300A73B0E /* NVLiveWaterMarkSettingViewController.m in Sources */,
 				769B296D1FE3B2A300A73B0E /* NVLiveSettingChildViewController.m in Sources */,
+				C3424BB81FE378AB00A582B6 /* NVButtonRowView.m in Sources */,
+				C3424BB91FE378AB00A582B6 /* NVMusicListView.m in Sources */,
 				C317E5F21FD79D2E0065EA13 /* NVShortVideoViewController.m in Sources */,
 				76FDC5951FE3713500F19C67 /* NVLivePreviewViewController.m in Sources */,
 				761782771FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m in Sources */,
 				C317E5F31FD79D2E0065EA13 /* NVLiveStreamViewController.m in Sources */,
 				7617827B1FE10AAA0010EFE6 /* NVLiveUserModel.m in Sources */,
+				C3424BAC1FE377C700A582B6 /* NVProcessVideoViewController.m in Sources */,
 				C317E5E01FD6B9FE0065EA13 /* NVMainTabBarController.m in Sources */,
 				769B29741FE3C62C00A73B0E /* NVViewController.m in Sources */,
 				769B294F1FE3A83A00A73B0E /* NVLiveCoverView.m in Sources */,
@@ -489,9 +517,11 @@
 				769B29711FE3B2A300A73B0E /* NVLiveStreamSettingViewController.m in Sources */,
 				769B296F1FE3B2A300A73B0E /* NVLiveCaptureSettingViewController.m in Sources */,
 				C317E5E51FD6BB320065EA13 /* NVLoginViewController.m in Sources */,
+				C3424BAD1FE377C700A582B6 /* NVRecordVideoViewController.m in Sources */,
 				C317E5D01FD690650065EA13 /* NVUserConfigViewController.m in Sources */,
 				0A23BC631FD13E9100382174 /* main.m in Sources */,
 				C317E5CC1FD689390065EA13 /* NVFileManagerViewController.m in Sources */,
+				C3424BAE1FE377C700A582B6 /* NVPublishVideoViewController.m in Sources */,
 				0A23BC551FD13E9000382174 /* NVAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

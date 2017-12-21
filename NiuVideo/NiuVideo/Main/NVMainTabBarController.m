@@ -11,6 +11,7 @@
 #import "NVLiveStreamViewController.h"
 #import "NVFileManagerViewController.h"
 #import "NVUserConfigViewController.h"
+#import "NVRecordVideoViewController.h"
 
 #import "NVSelectClassView.h"
 
@@ -93,6 +94,9 @@ NVSelectClassViewDelegate
     [classView cancelSelectClassView];
     if (index == 0) {
         // 短视频
+        NVRecordVideoViewController *recordVideoVC = [[NVRecordVideoViewController alloc] init];
+        UINavigationController *recordVideoNav = [[UINavigationController alloc] initWithRootViewController:recordVideoVC];
+        [self presentViewController:recordVideoNav animated:NO completion:nil];
     } else{
         // 直播
         

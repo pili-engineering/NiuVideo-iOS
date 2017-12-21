@@ -23,10 +23,10 @@
 #define NV_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 /********************  机型尺寸  ********************/
-#define BC_IPHONE_5SE (NV_SCREEN_HEIGHT == 568.0f)
-#define BC_IPHONE_6 (NV_SCREEN_HEIGHT == 667.0f)
-#define BC_IPHONE_6PLUS (NV_SCREEN_HEIGHT == 736.0f)
-#define BC_IPHONE_X (NV_SCREEN_HEIGHT == 812.0)
+#define NV_IPHONE_5SE (NV_SCREEN_HEIGHT == 568.0f)
+#define NV_IPHONE_6 (NV_SCREEN_HEIGHT == 667.0f)
+#define NV_IPHONE_6PLUS (NV_SCREEN_HEIGHT == 736.0f)
+#define NV_IPHONE_X (NV_SCREEN_HEIGHT == 812.0)
 
 // iPhone X
 #define NV_SAFE_TOP_HEIGHT_NAV (NV_SCREEN_HEIGHT == 812.0 ? 88 : 64) //有导航条时的顶部安全高度
