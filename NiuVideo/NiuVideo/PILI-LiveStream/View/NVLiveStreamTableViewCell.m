@@ -7,7 +7,6 @@
 //
 
 #import "NVLiveStreamTableViewCell.h"
-#import <Masonry.h>
 
 @interface NVLiveStreamTableViewCell ()
 

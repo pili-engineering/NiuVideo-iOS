@@ -1,27 +1,28 @@
 //
-//  ViewController.m
+//  NVViewController.m
 //  NiuVideo
 //
 //  Created by hxiongan on 2017/12/15.
 //  Copyright © 2017年 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NVViewController.h"
 
-@interface ViewController ()
+@interface NVViewController ()
 
 @end
 
-@implementation ViewController
+@implementation NVViewController
 
--(void)dealloc {
+- (void)dealloc {
 #ifdef DEBUG
-    printf("\n [dealloc] class = %s\n", [NSStringFromClass(self.class) UTF8String]);
+    printf("\n[dealloc] %s\n", [NSStringFromClass(self.class) UTF8String]);
 #endif
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 

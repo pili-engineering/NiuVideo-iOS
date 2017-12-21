@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NVViewController.h
 //  NiuVideo
 //
 //  Created by hxiongan on 2017/12/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface NVViewController : UIViewController
 
 @end

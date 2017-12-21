@@ -1,5 +1,5 @@
 //
-//  NVLivePreviewViewController.h
+//  NVLiveSettingChildViewController.h
 //  NiuVideo
 //
 //  Created by hxiongan on 2017/12/15.
@@ -8,6 +8,6 @@
 
 #import "NVViewController.h"
 
-@interface NVLivePreviewViewController : NVViewController
+@interface NVLiveSettingChildViewController : NVViewController
 
 @end

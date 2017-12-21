@@ -39,6 +39,7 @@
 #define NV_HEIGHT_RATIO (NV_SCREEN_HEIGHT / 667.f)
 
 /********************  第三方  ********************/
+#define MAS_SHORTHAND_GLOBALS
 #import <Masonry.h>
 
 

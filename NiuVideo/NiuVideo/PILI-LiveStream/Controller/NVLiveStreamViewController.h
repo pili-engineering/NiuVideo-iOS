@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NVViewController.h"
 
-@interface NVLiveStreamViewController : ViewController
+@interface NVLiveStreamViewController : NVViewController
 
 @end

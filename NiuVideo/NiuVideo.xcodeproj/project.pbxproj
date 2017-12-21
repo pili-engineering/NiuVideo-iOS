@@ -14,7 +14,13 @@
 		0A23BC631FD13E9100382174 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A23BC621FD13E9100382174 /* main.m */; };
 		761782771FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */; };
 		7617827B1FE10AAA0010EFE6 /* NVLiveUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */; };
-		76FDC5921FE3703400F19C67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDC5911FE3703400F19C67 /* ViewController.m */; };
+		769B294F1FE3A83A00A73B0E /* NVLiveCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B294E1FE3A83A00A73B0E /* NVLiveCoverView.m */; };
+		769B296D1FE3B2A300A73B0E /* NVLiveSettingChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29651FE3B2A200A73B0E /* NVLiveSettingChildViewController.m */; };
+		769B296E1FE3B2A300A73B0E /* NVLiveWaterMarkSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29661FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.m */; };
+		769B296F1FE3B2A300A73B0E /* NVLiveCaptureSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29671FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.m */; };
+		769B29701FE3B2A300A73B0E /* NVLiveSettingSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29681FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.m */; };
+		769B29711FE3B2A300A73B0E /* NVLiveStreamSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B296A1FE3B2A200A73B0E /* NVLiveStreamSettingViewController.m */; };
+		769B29741FE3C62C00A73B0E /* NVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29731FE3C62C00A73B0E /* NVViewController.m */; };
 		76FDC5951FE3713500F19C67 /* NVLivePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */; };
 		BBC951B9F8B1444045171998 /* libPods-NiuVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E2A862E04702DD16F5E5AD /* libPods-NiuVideo.a */; };
 		C317E5CC1FD689390065EA13 /* NVFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C317E5CB1FD689390065EA13 /* NVFileManagerViewController.m */; };
@@ -42,8 +48,20 @@
 		761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveStreamTableViewCell.m; sourceTree = "<group>"; };
 		761782791FE10AAA0010EFE6 /* NVLiveUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveUserModel.h; sourceTree = "<group>"; };
 		7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveUserModel.m; sourceTree = "<group>"; };
-		76FDC5901FE3703400F19C67 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		76FDC5911FE3703400F19C67 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		769B294D1FE3A83A00A73B0E /* NVLiveCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveCoverView.h; sourceTree = "<group>"; };
+		769B294E1FE3A83A00A73B0E /* NVLiveCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveCoverView.m; sourceTree = "<group>"; };
+		769B29631FE3B2A200A73B0E /* NVLiveSettingChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveSettingChildViewController.h; sourceTree = "<group>"; };
+		769B29641FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveWaterMarkSettingViewController.h; sourceTree = "<group>"; };
+		769B29651FE3B2A200A73B0E /* NVLiveSettingChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveSettingChildViewController.m; sourceTree = "<group>"; };
+		769B29661FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveWaterMarkSettingViewController.m; sourceTree = "<group>"; };
+		769B29671FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveCaptureSettingViewController.m; sourceTree = "<group>"; };
+		769B29681FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveSettingSegmentViewController.m; sourceTree = "<group>"; };
+		769B29691FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveCaptureSettingViewController.h; sourceTree = "<group>"; };
+		769B296A1FE3B2A200A73B0E /* NVLiveStreamSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveStreamSettingViewController.m; sourceTree = "<group>"; };
+		769B296B1FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveSettingSegmentViewController.h; sourceTree = "<group>"; };
+		769B296C1FE3B2A300A73B0E /* NVLiveStreamSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveStreamSettingViewController.h; sourceTree = "<group>"; };
+		769B29721FE3C62C00A73B0E /* NVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVViewController.h; sourceTree = "<group>"; };
+		769B29731FE3C62C00A73B0E /* NVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVViewController.m; sourceTree = "<group>"; };
 		76FDC5931FE3713500F19C67 /* NVLivePreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLivePreviewViewController.h; sourceTree = "<group>"; };
 		76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLivePreviewViewController.m; sourceTree = "<group>"; };
 		C317E5C81FD689040065EA13 /* NVUserConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVUserConfigViewController.h; sourceTree = "<group>"; };
@@ -139,6 +157,8 @@
 			children = (
 				761782751FE0FA770010EFE6 /* NVLiveStreamTableViewCell.h */,
 				761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */,
+				769B294D1FE3A83A00A73B0E /* NVLiveCoverView.h */,
+				769B294E1FE3A83A00A73B0E /* NVLiveCoverView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +170,23 @@
 				7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		769B29621FE3B26E00A73B0E /* settingController */ = {
+			isa = PBXGroup;
+			children = (
+				769B296B1FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.h */,
+				769B29681FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.m */,
+				769B29631FE3B2A200A73B0E /* NVLiveSettingChildViewController.h */,
+				769B29651FE3B2A200A73B0E /* NVLiveSettingChildViewController.m */,
+				769B29691FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.h */,
+				769B29671FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.m */,
+				769B296C1FE3B2A300A73B0E /* NVLiveStreamSettingViewController.h */,
+				769B296A1FE3B2A200A73B0E /* NVLiveStreamSettingViewController.m */,
+				769B29641FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.h */,
+				769B29661FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.m */,
+			);
+			path = settingController;
 			sourceTree = "<group>";
 		};
 		C317E5B71FD689030065EA13 /* FileManager */ = {
@@ -229,10 +266,11 @@
 			children = (
 				C317E5EC1FD79D0E0065EA13 /* NVLiveStreamViewController.h */,
 				C317E5ED1FD79D0E0065EA13 /* NVLiveStreamViewController.m */,
-				76FDC5901FE3703400F19C67 /* ViewController.h */,
-				76FDC5911FE3703400F19C67 /* ViewController.m */,
+				769B29721FE3C62C00A73B0E /* NVViewController.h */,
+				769B29731FE3C62C00A73B0E /* NVViewController.m */,
 				76FDC5931FE3713500F19C67 /* NVLivePreviewViewController.h */,
 				76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */,
+				769B29621FE3B26E00A73B0E /* settingController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -436,14 +474,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769B296E1FE3B2A300A73B0E /* NVLiveWaterMarkSettingViewController.m in Sources */,
+				769B296D1FE3B2A300A73B0E /* NVLiveSettingChildViewController.m in Sources */,
 				C317E5F21FD79D2E0065EA13 /* NVShortVideoViewController.m in Sources */,
 				76FDC5951FE3713500F19C67 /* NVLivePreviewViewController.m in Sources */,
 				761782771FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m in Sources */,
 				C317E5F31FD79D2E0065EA13 /* NVLiveStreamViewController.m in Sources */,
 				7617827B1FE10AAA0010EFE6 /* NVLiveUserModel.m in Sources */,
 				C317E5E01FD6B9FE0065EA13 /* NVMainTabBarController.m in Sources */,
+				769B29741FE3C62C00A73B0E /* NVViewController.m in Sources */,
+				769B294F1FE3A83A00A73B0E /* NVLiveCoverView.m in Sources */,
 				C317E5E11FD6B9FE0065EA13 /* NVSelectClassView.m in Sources */,
-				76FDC5921FE3703400F19C67 /* ViewController.m in Sources */,
+				769B29701FE3B2A300A73B0E /* NVLiveSettingSegmentViewController.m in Sources */,
+				769B29711FE3B2A300A73B0E /* NVLiveStreamSettingViewController.m in Sources */,
+				769B296F1FE3B2A300A73B0E /* NVLiveCaptureSettingViewController.m in Sources */,
 				C317E5E51FD6BB320065EA13 /* NVLoginViewController.m in Sources */,
 				C317E5D01FD690650065EA13 /* NVUserConfigViewController.m in Sources */,
 				0A23BC631FD13E9100382174 /* main.m in Sources */,

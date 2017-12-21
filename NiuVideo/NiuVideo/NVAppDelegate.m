@@ -9,6 +9,8 @@
 #import "NVAppDelegate.h"
 #import "NVLoginViewController.h"
 #import "NVMainTabBarController.h"
+#import <PLStreamingEnv.h>
+
 @interface NVAppDelegate ()
 
 @end
@@ -25,6 +27,10 @@
     self.window.rootViewController = mainTabBarController;
     
     [self.window makeKeyAndVisible];
+    
+    //ahx add init env
+    [PLStreamingEnv initEnv];
+    
     return YES;
 }
 
