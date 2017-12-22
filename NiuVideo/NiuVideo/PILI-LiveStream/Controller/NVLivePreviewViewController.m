@@ -11,12 +11,18 @@
 #import <PLMediaStreamingKit.h>
 #import <PLRTCStreamingKit.h>
 #import <PLCommon.h>
-#import "NVLiveCoverView.h"
+
 #import "NVLiveSettingSegmentViewController.h"
+#import "NVLiveCoverView.h"
+#import "NVStartLiveView.h"
+#import "NVLiveToolBoxView.h"
 
 @interface NVLivePreviewViewController ()
 <
-PLMediaStreamingSessionDelegate
+PLMediaStreamingSessionDelegate,
+NVLiveCoverViewDelegate,
+NVStartLiveViewDelegate,
+NVLiveToolBoxViewDelegate
 >
 
 // stream
@@ -29,8 +35,10 @@ PLMediaStreamingSessionDelegate
 @property (nonatomic, strong) NSURL                         *streamURL;
 
 // UI
-// 浮层，方便点击或者滑动全部隐藏
+/// 浮层，方便点击或者滑动全部隐藏
 @property (nonatomic, strong) NVLiveCoverView               *coverView;
+@property (nonatomic, strong) NVStartLiveView               *startLiveView;
+@property (nonatomic, strong) NVLiveToolBoxView             *toolBoxView;
 
 @property (nonatomic)    BOOL cameraAccess;
 @property (nonatomic)    BOOL microphoneAccess;
@@ -49,27 +57,77 @@ PLMediaStreamingSessionDelegate
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
+    [self setupUI];
+    [self hideView:self.coverView];
+    [self.toolBoxView hide];
+    
+    [self requsetPushURL];
+    
     [self checkCameraAccess];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setupSession];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+
+    [self.streamSession.previewView removeFromSuperview];
+    [self.streamSession destroy];
+    self.streamSession = nil;
     
-    if (_cameraAccess && _microphoneAccess) {
-        [self setupSession];
-    }
+    [self hideView:self.coverView];
+    [self showView:self.startLiveView];
     
-    UIButton* testButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [testButton setTitle:@"start" forState:(UIControlStateNormal)];
-    [testButton addTarget:self action:@selector(testButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
-    [testButton sizeToFit];
-    [self.view addSubview:testButton];
-    [testButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-        make.size.equalTo(@(testButton.bounds.size));
+    [super viewDidDisappear:animated];
+}
+
+- (void)setupUI {
+    
+    _coverView = [[NVLiveCoverView alloc] init];
+    _coverView.delegate = self;
+    
+    _startLiveView = [[NVStartLiveView alloc] init];
+    _startLiveView.delegate = self;
+    
+    _toolBoxView = [[NVLiveToolBoxView alloc] init];
+    _toolBoxView.delegate = self;
+    
+    [self.view addSubview:_coverView];
+    [self.view addSubview:_startLiveView];
+    [self.view addSubview:_toolBoxView];
+    
+    [_coverView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    [_startLiveView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    [_toolBoxView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
     }];
 }
 
-- (void)testButtonAction:(UIButton*)button {
-//    [self startStream];
-//    button.enabled = NO;
-    [self.navigationController pushViewController:[[NVLiveSettingSegmentViewController alloc] init] animated:YES];
+- (void)hideView:(UIView*)view {
+    
+    [UIView animateWithDuration:.3 animations:^{
+        view.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        view.hidden = YES;
+    }];
+}
+
+- (void)showView:(UIView*)view {
+    
+    view.hidden = NO;
+    [UIView animateWithDuration:.3 animations:^{
+        view.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -134,11 +192,14 @@ PLMediaStreamingSessionDelegate
 - (void)setupSession {
     
     if (!(_microphoneAccess && _cameraAccess)) return;
+    if (_streamSession) return;
     
-    _videoCaptureConfig = [PLVideoCaptureConfiguration defaultConfiguration];
-    _videoStreamConfig  = [PLVideoStreamingConfiguration defaultConfiguration];
-    _audioCaptureConfig = [PLAudioCaptureConfiguration defaultConfiguration];
-    _audioStreamConfig  = [PLAudioStreamingConfiguration defaultConfiguration];
+    if (nil == _videoStreamConfig) {
+        _videoCaptureConfig = [PLVideoCaptureConfiguration defaultConfiguration];
+        _videoStreamConfig  = [PLVideoStreamingConfiguration defaultConfiguration];
+        _audioCaptureConfig = [PLAudioCaptureConfiguration defaultConfiguration];
+        _audioStreamConfig  = [PLAudioStreamingConfiguration defaultConfiguration];
+    }
     
     _streamSession = [[PLMediaStreamingSession alloc] initWithVideoCaptureConfiguration:_videoCaptureConfig
                                                               audioCaptureConfiguration:_audioCaptureConfig
@@ -150,19 +211,23 @@ PLMediaStreamingSessionDelegate
     [_streamSession.previewView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    
-    [self requsetPushURL];
 }
+
 
 - (void)startStream {
     
+    // show waiting .....
+    
     __weak typeof(self) wself = self;
     [_streamSession startStreamingWithPushURL:_streamURL feedback:^(PLStreamStartStateFeedback feedback) {
-        NSLog(@"start stream %d", feedback);
+        NSLog(@"start stream %lu", (unsigned long)feedback);
+        // hide waiting .....
+        
         if (PLStreamStartStateSuccess == feedback) {
-            // succeed
+            [wself hideView:wself.startLiveView];
+            [wself showView:wself.coverView];
         } else {
-            // failed
+            //alert failed
         }
     }];
 }
@@ -175,7 +240,40 @@ PLMediaStreamingSessionDelegate
 
 - (void)requsetPushURL {
     //temp
-    _streamURL = [NSURL URLWithString:@"rtmp://pili-publish.pili2test.qbox.net/pili2test/anhaoxiong?e=1513321740&token=dSC2IIrmjNXONzPvVgXZo0mI0AI83835NIuXQ3iD:cs4YtYeoki6gOrm0OL7k99mr6HM="];
+    _streamURL = [NSURL URLWithString:@""];
+}
+
+
+#pragma mark - NVLiveCoverViewDelegate
+
+- (void)liveCoverViewCloseAction:(NVLiveCoverView *)liveCoverView {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)liveCoverViewShareAction:(NVLiveCoverView *)liveCoverView {
+    
+}
+
+- (void)liveCoverViewCommentAction:(NVLiveCoverView *)liveCoverView {
+    [self.toolBoxView show];
+}
+
+- (void)liveCoverViewMessageAction:(NVLiveCoverView *)liveCoverView {
+    
+}
+
+- (void)liveCoverViewSettingAction:(NVLiveCoverView *)liveCoverView {
+    [self presentViewController:[[NVLiveSettingSegmentViewController alloc] init]];
+}
+
+#pragma mark - NVStartLiveViewDelegate
+
+- (void)startLiveView:(NVStartLiveView *)liveView startLiveWithTitle:(NSString *)title {
+    [self startStream];
+}
+
+- (void)startLiveViewCloseButtonClick:(NVStartLiveView *)liveView {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

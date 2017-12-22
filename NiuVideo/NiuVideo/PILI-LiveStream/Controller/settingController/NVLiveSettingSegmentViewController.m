@@ -11,8 +11,9 @@
 #import "NVLiveWaterMarkSettingViewController.h"
 #import "NVLiveStreamSettingViewController.h"
 #import "NiuVideoPCH.h"
+#import "NVPanScrollView.h"
 
-/// 将三个设置页面放到三个controller中，减轻controller的负担，避免出现复制的逻辑和大量的代码堆积在一个文件之中
+/// 将三个设置页面放到三个controller中，减轻controller的负担，避免出现复杂的逻辑和大量的代码堆积在一个文件之中
 
 @interface NVLiveSettingSegmentViewController ()
 <
@@ -23,7 +24,7 @@ UITabBarDelegate
     NVLiveSettingChildViewController* _childControllers[3];
 }
 
-@property (nonatomic, strong) UIScrollView                          *scrollView;
+@property (nonatomic, strong) NVPanScrollView                       *scrollView;
 @property (nonatomic, strong) UITabBar                              *tabBar;
 
 @property (nonatomic, strong) NVLiveCaptureSettingViewController    *captureSettingController;
@@ -36,13 +37,12 @@ UITabBarDelegate
 
 @implementation NVLiveSettingSegmentViewController
 
-#define MAS_SHORTHAND
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self initChildController];
     [self initTabBar];
+    self.tabBar.selectedItem = self.tabBar.items[0];
 }
 
 - (void)initTabBar {
@@ -60,17 +60,16 @@ UITabBarDelegate
     [self.view addSubview:self.tabBar];
     [self.tabBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
-        make.height.equalTo(49);
+        make.height.equalTo(NV_SAFE_BOTTOM_HEIGHT);
     }];
 }
 
 - (void)initChildController {
     
-    self.scrollView                 = [[UIScrollView alloc]init];
+    self.scrollView                 = [[NVPanScrollView alloc]init];
     self.scrollView.pagingEnabled   = YES;
     self.scrollView.delegate        = self;
     self.scrollView.bounces         = NO;
-    //    self.scrollView.avalibeValue_x  = 40;//当position的 x < 40时，scrollView的自己的手势不响应，相应其他的手势(比如滑动返回)，这里主要是滑动显示左侧的view
     self.scrollView.showsHorizontalScrollIndicator = NO;
     
     self.captureSettingController   = [[NVLiveCaptureSettingViewController alloc] init];

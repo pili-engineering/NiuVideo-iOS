@@ -14,9 +14,8 @@
 - (void)liveCoverViewCloseAction:(NVLiveCoverView*)liveCoverView;
 - (void)liveCoverViewShareAction:(NVLiveCoverView*)liveCoverView;
 - (void)liveCoverViewMessageAction:(NVLiveCoverView*)liveCoverView;
-- (void)liveCoverViewControlAction:(NVLiveCoverView*)liveCoverView;
-
-- (void)liveCoverView:(NVLiveCoverView*)liveCoverView startStreamActionWithTitle:(NSString*)title;
+- (void)liveCoverViewCommentAction:(NVLiveCoverView*)liveCoverView;
+- (void)liveCoverViewSettingAction:(NVLiveCoverView*)liveCoverView;
 
 @end
 
@@ -24,5 +23,5 @@
 @interface NVLiveCoverView : UIView
 
 @property (nonatomic, weak) id<NVLiveCoverViewDelegate>delegate;
-
+@property (nonatomic)       BOOL isPushLive;//是直播还是观看直播,YES:直播；NO:观看
 @end

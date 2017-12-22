@@ -7,7 +7,60 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PanAnimationController.h"
+#import "HorizontalSwipeInteractionController.h"
+
+//controller的显示模式，push或者present
+typedef enum : NSUInteger {
+    NVControllerShowModePush,
+    NVControllerShowModePresent,
+} NVControllerShowMode;
+
+typedef enum : NSUInteger {
+    NVNavigationLeftItemTagBack = 0x123,
+    NVNavigationLeftItemTagDismiss,
+    NVNavigationLeftItemTagBackToRoot,
+} NVNavigationLeftItemTag;
 
 @interface NVViewController : UIViewController
+<
+UIViewControllerTransitioningDelegate
+>
+
+/// controller的显示模式，push或者present
+@property(nonatomic) NVControllerShowMode controllerShowMode;
+/// 自定义的controller交互动画
+@property(nonatomic, strong) PanAnimationController *viewControllerAnimatedTransitioning;
+@property(nonatomic, strong) HorizontalSwipeInteractionController *percentDrivenInteractiveTransition;
+
+/**
+    禁用自定义交互滑动返回手势
+ */
+- (void)disablePanInteraction;
+
+/**
+    启用自定义交互滑动返回手势
+ */
+- (void)enablePanInteraction;
+
+/**
+    用自定义交互的方式显示controller
+    controller：将用自定义交互present的viewController
+ */
+- (void)presentViewController:(NVViewController*)controller;
+
+@end
+
+
+
+@interface UIViewController (NVViewControllerCategory)
+
+- (UIBarButtonItem*)spaceItem;
+- (void)setNavigationLeftItemBack;
+- (void)setNavigationLeftItemDismiss;
+- (void)setNavigationLeftItemEmpty;
+- (void)setNavigationLeftItemWithCustom:(UIView*)customView;
+- (void)enablePanGestureRecognizerBack:(BOOL)enable;
+- (void)clickLeftItem:(UIButton*)sender;
 
 @end

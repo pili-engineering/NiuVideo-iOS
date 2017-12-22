@@ -38,6 +38,12 @@
 #define NV_WIDTH_RATIO (NV_SCREEN_WIDTH / 375.f)
 #define NV_HEIGHT_RATIO (NV_SCREEN_HEIGHT / 667.f)
 
+
+// 工具宏
+#ifndef ARRAY_SIZE
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+#endif
+
 /********************  第三方  ********************/
 #define MAS_SHORTHAND_GLOBALS
 #import <Masonry.h>

@@ -27,6 +27,7 @@ NVLiveStreamTableViewCellDelegate
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self setNavigationLeftItemEmpty];
     [self setupNavigationItem];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];

@@ -101,11 +101,8 @@ NVSelectClassViewDelegate
         // 直播
         
         //ahx temp add
-        UIViewController* vc = self.selectedViewController;
-        if ([self.selectedViewController isKindOfClass:[UINavigationController class]]) {
-            UINavigationController* nvc = (UINavigationController*)vc;
-            [nvc pushViewController:[[NVLivePreviewViewController alloc] init] animated:YES];
-        }
+        NVLivePreviewViewController* livePreviewController = [[NVLivePreviewViewController alloc] init];
+        [self presentViewController:livePreviewController animated:YES completion:nil];
     }
 }
 
