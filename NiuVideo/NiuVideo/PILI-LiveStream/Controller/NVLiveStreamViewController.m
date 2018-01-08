@@ -7,8 +7,17 @@
 //
 
 #import "NVLiveStreamViewController.h"
+#import "NVLiveStreamTableViewCell.h"
 
 @interface NVLiveStreamViewController ()
+<
+UITableViewDelegate,
+UITableViewDataSource,
+NVLiveStreamTableViewCellDelegate
+>
+
+@property (nonatomic, strong) UITableView       *tableView;
+@property (nonatomic, strong) NSMutableArray    *liveUserArray;
 
 @end
 
@@ -18,7 +27,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self setNavigationLeftItemEmpty];
     [self setupNavigationItem];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
+    self.tableView.delegate     = self;
+    self.tableView.dataSource   = self;
+    [self.view addSubview:self.tableView];
+    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    [self requestLiveUser];
 }
 
 - (void)setupNavigationItem {
@@ -54,6 +75,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark -------- network ---------
+- (void)requestLiveUser {
+    if (!self.liveUserArray) {
+        self.liveUserArray = [[NSMutableArray alloc] init];
+    }
+    
+    // doing request ....
+}
+
 /*
 #pragma mark - Navigation
 
@@ -63,5 +94,49 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+#pragma mark - tableView DataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.liveUserArray.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *cellReuseID = @"liveTableCell";
+    NVLiveStreamTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseID];
+    if (!cell) {
+        cell = [[NVLiveStreamTableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellReuseID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    cell.liveUserModel = [self.liveUserArray objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - tableView Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - NVLiveStreamTableViewCellDelegate
+
+- (void)liveStreamTableViewCellShareButtonClick:(NVLiveStreamTableViewCell *)liveCell {
+    
+}
 
 @end

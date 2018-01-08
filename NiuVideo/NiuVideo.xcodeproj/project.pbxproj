@@ -12,6 +12,27 @@
 		0A23BC5D1FD13E9100382174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A23BC5C1FD13E9100382174 /* Assets.xcassets */; };
 		0A23BC601FD13E9100382174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A23BC5E1FD13E9100382174 /* LaunchScreen.storyboard */; };
 		0A23BC631FD13E9100382174 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A23BC621FD13E9100382174 /* main.m */; };
+		761023001FEBB24800A7DA94 /* NVLiveToolBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 761022FF1FEBB24800A7DA94 /* NVLiveToolBoxView.m */; };
+		761023031FF096EB00A7DA94 /* NVLiveSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 761023021FF096EB00A7DA94 /* NVLiveSettingTableViewCell.m */; };
+		761023061FF0972800A7DA94 /* NVLiveSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 761023051FF0972800A7DA94 /* NVLiveSettingItem.m */; };
+		761782771FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */; };
+		7617827B1FE10AAA0010EFE6 /* NVLiveUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */; };
+		765579891FF49E77008190DF /* NVLiveSettingValuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 765579881FF49E77008190DF /* NVLiveSettingValuePickerView.m */; };
+		766E5FAB1FEB55D500900BD1 /* NVStartLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 766E5FAA1FEB55D500900BD1 /* NVStartLiveView.m */; };
+		766E5FC71FEB830500900BD1 /* VerticalSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766E5FBE1FEB830500900BD1 /* VerticalSwipeInteractionController.m */; };
+		766E5FC81FEB830500900BD1 /* BaseInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766E5FC01FEB830500900BD1 /* BaseInteractionController.m */; };
+		766E5FC91FEB830500900BD1 /* HorizontalSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766E5FC21FEB830500900BD1 /* HorizontalSwipeInteractionController.m */; };
+		766E5FCA1FEB830500900BD1 /* ReversibleAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766E5FC41FEB830500900BD1 /* ReversibleAnimationController.m */; };
+		766E5FCB1FEB830500900BD1 /* PanAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766E5FC61FEB830500900BD1 /* PanAnimationController.m */; };
+		766E5FCE1FEB8D7A00900BD1 /* NVPanScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 766E5FCD1FEB8D7A00900BD1 /* NVPanScrollView.m */; };
+		769B294F1FE3A83A00A73B0E /* NVLiveCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B294E1FE3A83A00A73B0E /* NVLiveCoverView.m */; };
+		769B296D1FE3B2A300A73B0E /* NVLiveSettingChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29651FE3B2A200A73B0E /* NVLiveSettingChildViewController.m */; };
+		769B296E1FE3B2A300A73B0E /* NVLiveWaterMarkSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29661FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.m */; };
+		769B296F1FE3B2A300A73B0E /* NVLiveCaptureSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29671FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.m */; };
+		769B29701FE3B2A300A73B0E /* NVLiveSettingSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29681FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.m */; };
+		769B29711FE3B2A300A73B0E /* NVLiveStreamSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B296A1FE3B2A200A73B0E /* NVLiveStreamSettingViewController.m */; };
+		769B29741FE3C62C00A73B0E /* NVBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769B29731FE3C62C00A73B0E /* NVBaseViewController.m */; };
+		76FDC5951FE3713500F19C67 /* NVLivePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */; };
 		BBC951B9F8B1444045171998 /* libPods-NiuVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E2A862E04702DD16F5E5AD /* libPods-NiuVideo.a */; };
 		C317E5CC1FD689390065EA13 /* NVFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C317E5CB1FD689390065EA13 /* NVFileManagerViewController.m */; };
 		C317E5D01FD690650065EA13 /* NVUserConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C317E5C91FD689040065EA13 /* NVUserConfigViewController.m */; };
@@ -39,6 +60,48 @@
 		25E4DFBCBD39986F4693B10E /* Pods-NiuVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiuVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiuVideo/Pods-NiuVideo.release.xcconfig"; sourceTree = "<group>"; };
 		638D46359546FB5F0509431E /* Pods-NiuVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiuVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiuVideo/Pods-NiuVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		75E2A862E04702DD16F5E5AD /* libPods-NiuVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NiuVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		761022FE1FEBB24800A7DA94 /* NVLiveToolBoxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveToolBoxView.h; sourceTree = "<group>"; };
+		761022FF1FEBB24800A7DA94 /* NVLiveToolBoxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveToolBoxView.m; sourceTree = "<group>"; };
+		761023011FF096EB00A7DA94 /* NVLiveSettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveSettingTableViewCell.h; sourceTree = "<group>"; };
+		761023021FF096EB00A7DA94 /* NVLiveSettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveSettingTableViewCell.m; sourceTree = "<group>"; };
+		761023041FF0972800A7DA94 /* NVLiveSettingItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveSettingItem.h; sourceTree = "<group>"; };
+		761023051FF0972800A7DA94 /* NVLiveSettingItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveSettingItem.m; sourceTree = "<group>"; };
+		761782751FE0FA770010EFE6 /* NVLiveStreamTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveStreamTableViewCell.h; sourceTree = "<group>"; };
+		761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveStreamTableViewCell.m; sourceTree = "<group>"; };
+		761782791FE10AAA0010EFE6 /* NVLiveUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveUserModel.h; sourceTree = "<group>"; };
+		7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveUserModel.m; sourceTree = "<group>"; };
+		765579871FF49E77008190DF /* NVLiveSettingValuePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveSettingValuePickerView.h; sourceTree = "<group>"; };
+		765579881FF49E77008190DF /* NVLiveSettingValuePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveSettingValuePickerView.m; sourceTree = "<group>"; };
+		766E5FA91FEB55D500900BD1 /* NVStartLiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVStartLiveView.h; sourceTree = "<group>"; };
+		766E5FAA1FEB55D500900BD1 /* NVStartLiveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVStartLiveView.m; sourceTree = "<group>"; };
+		766E5FBD1FEB830500900BD1 /* ReversibleAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReversibleAnimationController.h; sourceTree = "<group>"; };
+		766E5FBE1FEB830500900BD1 /* VerticalSwipeInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalSwipeInteractionController.m; sourceTree = "<group>"; };
+		766E5FBF1FEB830500900BD1 /* HorizontalSwipeInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalSwipeInteractionController.h; sourceTree = "<group>"; };
+		766E5FC01FEB830500900BD1 /* BaseInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseInteractionController.m; sourceTree = "<group>"; };
+		766E5FC11FEB830500900BD1 /* PanAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanAnimationController.h; sourceTree = "<group>"; };
+		766E5FC21FEB830500900BD1 /* HorizontalSwipeInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalSwipeInteractionController.m; sourceTree = "<group>"; };
+		766E5FC31FEB830500900BD1 /* VerticalSwipeInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalSwipeInteractionController.h; sourceTree = "<group>"; };
+		766E5FC41FEB830500900BD1 /* ReversibleAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReversibleAnimationController.m; sourceTree = "<group>"; };
+		766E5FC51FEB830500900BD1 /* BaseInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseInteractionController.h; sourceTree = "<group>"; };
+		766E5FC61FEB830500900BD1 /* PanAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanAnimationController.m; sourceTree = "<group>"; };
+		766E5FCC1FEB8D7A00900BD1 /* NVPanScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVPanScrollView.h; sourceTree = "<group>"; };
+		766E5FCD1FEB8D7A00900BD1 /* NVPanScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVPanScrollView.m; sourceTree = "<group>"; };
+		769B294D1FE3A83A00A73B0E /* NVLiveCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLiveCoverView.h; sourceTree = "<group>"; };
+		769B294E1FE3A83A00A73B0E /* NVLiveCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLiveCoverView.m; sourceTree = "<group>"; };
+		769B29631FE3B2A200A73B0E /* NVLiveSettingChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveSettingChildViewController.h; sourceTree = "<group>"; };
+		769B29641FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveWaterMarkSettingViewController.h; sourceTree = "<group>"; };
+		769B29651FE3B2A200A73B0E /* NVLiveSettingChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveSettingChildViewController.m; sourceTree = "<group>"; };
+		769B29661FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveWaterMarkSettingViewController.m; sourceTree = "<group>"; };
+		769B29671FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveCaptureSettingViewController.m; sourceTree = "<group>"; };
+		769B29681FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveSettingSegmentViewController.m; sourceTree = "<group>"; };
+		769B29691FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveCaptureSettingViewController.h; sourceTree = "<group>"; };
+		769B296A1FE3B2A200A73B0E /* NVLiveStreamSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLiveStreamSettingViewController.m; sourceTree = "<group>"; };
+		769B296B1FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveSettingSegmentViewController.h; sourceTree = "<group>"; };
+		769B296C1FE3B2A300A73B0E /* NVLiveStreamSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLiveStreamSettingViewController.h; sourceTree = "<group>"; };
+		769B29721FE3C62C00A73B0E /* NVBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVBaseViewController.h; sourceTree = "<group>"; };
+		769B29731FE3C62C00A73B0E /* NVBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVBaseViewController.m; sourceTree = "<group>"; };
+		76FDC5931FE3713500F19C67 /* NVLivePreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVLivePreviewViewController.h; sourceTree = "<group>"; };
+		76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVLivePreviewViewController.m; sourceTree = "<group>"; };
 		C317E5C81FD689040065EA13 /* NVUserConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVUserConfigViewController.h; sourceTree = "<group>"; };
 		C317E5C91FD689040065EA13 /* NVUserConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVUserConfigViewController.m; sourceTree = "<group>"; };
 		C317E5CA1FD689390065EA13 /* NVFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVFileManagerViewController.h; sourceTree = "<group>"; };
@@ -137,6 +200,70 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		761782741FE0FA260010EFE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				761782751FE0FA770010EFE6 /* NVLiveStreamTableViewCell.h */,
+				761782761FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m */,
+				761023011FF096EB00A7DA94 /* NVLiveSettingTableViewCell.h */,
+				761023021FF096EB00A7DA94 /* NVLiveSettingTableViewCell.m */,
+				765579871FF49E77008190DF /* NVLiveSettingValuePickerView.h */,
+				765579881FF49E77008190DF /* NVLiveSettingValuePickerView.m */,
+				769B294D1FE3A83A00A73B0E /* NVLiveCoverView.h */,
+				769B294E1FE3A83A00A73B0E /* NVLiveCoverView.m */,
+				766E5FA91FEB55D500900BD1 /* NVStartLiveView.h */,
+				766E5FAA1FEB55D500900BD1 /* NVStartLiveView.m */,
+				761022FE1FEBB24800A7DA94 /* NVLiveToolBoxView.h */,
+				761022FF1FEBB24800A7DA94 /* NVLiveToolBoxView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		761782781FE104530010EFE6 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				761782791FE10AAA0010EFE6 /* NVLiveUserModel.h */,
+				7617827A1FE10AAA0010EFE6 /* NVLiveUserModel.m */,
+				761023041FF0972800A7DA94 /* NVLiveSettingItem.h */,
+				761023051FF0972800A7DA94 /* NVLiveSettingItem.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		766E5FBC1FEB830500900BD1 /* CustomInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				766E5FBD1FEB830500900BD1 /* ReversibleAnimationController.h */,
+				766E5FBE1FEB830500900BD1 /* VerticalSwipeInteractionController.m */,
+				766E5FBF1FEB830500900BD1 /* HorizontalSwipeInteractionController.h */,
+				766E5FC01FEB830500900BD1 /* BaseInteractionController.m */,
+				766E5FC11FEB830500900BD1 /* PanAnimationController.h */,
+				766E5FC21FEB830500900BD1 /* HorizontalSwipeInteractionController.m */,
+				766E5FC31FEB830500900BD1 /* VerticalSwipeInteractionController.h */,
+				766E5FC41FEB830500900BD1 /* ReversibleAnimationController.m */,
+				766E5FC51FEB830500900BD1 /* BaseInteractionController.h */,
+				766E5FC61FEB830500900BD1 /* PanAnimationController.m */,
+			);
+			path = CustomInteraction;
+			sourceTree = "<group>";
+		};
+		769B29621FE3B26E00A73B0E /* settingController */ = {
+			isa = PBXGroup;
+			children = (
+				769B296B1FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.h */,
+				769B29681FE3B2A200A73B0E /* NVLiveSettingSegmentViewController.m */,
+				769B29631FE3B2A200A73B0E /* NVLiveSettingChildViewController.h */,
+				769B29651FE3B2A200A73B0E /* NVLiveSettingChildViewController.m */,
+				769B29691FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.h */,
+				769B29671FE3B2A200A73B0E /* NVLiveCaptureSettingViewController.m */,
+				769B296C1FE3B2A300A73B0E /* NVLiveStreamSettingViewController.h */,
+				769B296A1FE3B2A200A73B0E /* NVLiveStreamSettingViewController.m */,
+				769B29641FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.h */,
+				769B29661FE3B2A200A73B0E /* NVLiveWaterMarkSettingViewController.m */,
+			);
+			path = settingController;
+			sourceTree = "<group>";
+		};
 		C317E5B71FD689030065EA13 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				C317E5EB1FD79D0E0065EA13 /* Controller */,
+				761782741FE0FA260010EFE6 /* View */,
+				761782781FE104530010EFE6 /* DataModel */,
 			);
 			path = "PILI-LiveStream";
 			sourceTree = "<group>";
@@ -212,6 +341,11 @@
 			children = (
 				C317E5EC1FD79D0E0065EA13 /* NVLiveStreamViewController.h */,
 				C317E5ED1FD79D0E0065EA13 /* NVLiveStreamViewController.m */,
+				769B29721FE3C62C00A73B0E /* NVBaseViewController.h */,
+				769B29731FE3C62C00A73B0E /* NVBaseViewController.m */,
+				76FDC5931FE3713500F19C67 /* NVLivePreviewViewController.h */,
+				76FDC5941FE3713500F19C67 /* NVLivePreviewViewController.m */,
+				769B29621FE3B26E00A73B0E /* settingController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,6 +380,8 @@
 				C3424BB41FE3782800A582B6 /* NVButtonRowView.m */,
 				C3424BB51FE3782800A582B6 /* NVMusicListView.h */,
 				C3424BB61FE3782800A582B6 /* NVMusicListView.m */,
+				766E5FCC1FEB8D7A00900BD1 /* NVPanScrollView.h */,
+				766E5FCD1FEB8D7A00900BD1 /* NVPanScrollView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +399,7 @@
 		C37316CA1FD683E500228D6D /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				766E5FBC1FEB830500900BD1 /* CustomInteraction */,
 				C37316CB1FD683E500228D6D /* Category */,
 				C37316CC1FD683E500228D6D /* Extension */,
 				C37316CD1FD683E500228D6D /* Network */,
@@ -425,18 +562,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769B296E1FE3B2A300A73B0E /* NVLiveWaterMarkSettingViewController.m in Sources */,
+				761023001FEBB24800A7DA94 /* NVLiveToolBoxView.m in Sources */,
+				769B296D1FE3B2A300A73B0E /* NVLiveSettingChildViewController.m in Sources */,
 				C3424BB81FE378AB00A582B6 /* NVButtonRowView.m in Sources */,
 				C3424BB91FE378AB00A582B6 /* NVMusicListView.m in Sources */,
 				C317E5F21FD79D2E0065EA13 /* NVShortVideoViewController.m in Sources */,
+				766E5FC71FEB830500900BD1 /* VerticalSwipeInteractionController.m in Sources */,
+				76FDC5951FE3713500F19C67 /* NVLivePreviewViewController.m in Sources */,
+				766E5FC91FEB830500900BD1 /* HorizontalSwipeInteractionController.m in Sources */,
+				766E5FC81FEB830500900BD1 /* BaseInteractionController.m in Sources */,
+				761782771FE0FA770010EFE6 /* NVLiveStreamTableViewCell.m in Sources */,
 				C317E5F31FD79D2E0065EA13 /* NVLiveStreamViewController.m in Sources */,
+				7617827B1FE10AAA0010EFE6 /* NVLiveUserModel.m in Sources */,
 				C3424BAC1FE377C700A582B6 /* NVProcessVideoViewController.m in Sources */,
 				C317E5E01FD6B9FE0065EA13 /* NVMainTabBarController.m in Sources */,
+				766E5FCE1FEB8D7A00900BD1 /* NVPanScrollView.m in Sources */,
+				769B29741FE3C62C00A73B0E /* NVBaseViewController.m in Sources */,
+				769B294F1FE3A83A00A73B0E /* NVLiveCoverView.m in Sources */,
+				766E5FCA1FEB830500900BD1 /* ReversibleAnimationController.m in Sources */,
 				C317E5E11FD6B9FE0065EA13 /* NVSelectClassView.m in Sources */,
+				769B29701FE3B2A300A73B0E /* NVLiveSettingSegmentViewController.m in Sources */,
+				769B29711FE3B2A300A73B0E /* NVLiveStreamSettingViewController.m in Sources */,
+				766E5FCB1FEB830500900BD1 /* PanAnimationController.m in Sources */,
+				769B296F1FE3B2A300A73B0E /* NVLiveCaptureSettingViewController.m in Sources */,
+				766E5FAB1FEB55D500900BD1 /* NVStartLiveView.m in Sources */,
+				765579891FF49E77008190DF /* NVLiveSettingValuePickerView.m in Sources */,
 				C317E5E51FD6BB320065EA13 /* NVLoginViewController.m in Sources */,
 				C3424BAD1FE377C700A582B6 /* NVRecordVideoViewController.m in Sources */,
+				761023061FF0972800A7DA94 /* NVLiveSettingItem.m in Sources */,
 				C317E5D01FD690650065EA13 /* NVUserConfigViewController.m in Sources */,
 				0A23BC631FD13E9100382174 /* main.m in Sources */,
 				C317E5CC1FD689390065EA13 /* NVFileManagerViewController.m in Sources */,
+				761023031FF096EB00A7DA94 /* NVLiveSettingTableViewCell.m in Sources */,
 				C3424BAE1FE377C700A582B6 /* NVPublishVideoViewController.m in Sources */,
 				0A23BC551FD13E9000382174 /* NVAppDelegate.m in Sources */,
 			);

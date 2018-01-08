@@ -15,6 +15,10 @@
 
 #import "NVSelectClassView.h"
 
+
+//temp add
+#import "NVLivePreviewViewController.h"
+
 @interface NVMainTabBarController ()
 <
 UITabBarControllerDelegate,
@@ -95,6 +99,10 @@ NVSelectClassViewDelegate
         [self presentViewController:recordVideoNav animated:NO completion:nil];
     } else{
         // 直播
+        
+        //ahx temp add
+        NVLivePreviewViewController* livePreviewController = [[NVLivePreviewViewController alloc] init];
+        [self presentViewController:livePreviewController animated:YES completion:nil];
     }
 }
 
