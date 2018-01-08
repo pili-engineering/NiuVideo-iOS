@@ -9,14 +9,39 @@
 #import "NVLiveCaptureSettingViewController.h"
 
 @interface NVLiveCaptureSettingViewController ()
-
+@property (nonatomic, strong)NSMutableArray *itemArray;
 @end
 
 @implementation NVLiveCaptureSettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.itemArray = [[NSMutableArray alloc] init];
+    
+    NVLiveSettingItem* item = [[NVLiveSettingItem alloc] init];
+    item.title              = @"预览尺寸设置";
+    item.values             = @[@"小", @"中", @"大"];
+    item.itemType           = NVSettingItemPreviewSize;
+    item.selectedValueIndex = 0;
+    
+    [self.itemArray addObject:item];
+    
+    item                    = [[NVLiveSettingItem alloc] init];
+    item.title              = @"预览比例设置";
+    item.values             = @[@"16:9", @"4:3"];
+    item.itemType           = NVSettingItemPreViewRatio;
+    item.selectedValueIndex = 0;
+    
+    [self.itemArray addObject:item];
+    
+    item                    = [[NVLiveSettingItem alloc] init];
+    item.title              = @"预览比例设置";
+    item.values             = @[@"16:9", @"4:3"];
+    item.itemType           = NVSettingItemPreViewRatio;
+    item.selectedValueIndex = 0;
+    
+    [self.itemArray addObject:item];
 }
 
 - (void)didReceiveMemoryWarning {

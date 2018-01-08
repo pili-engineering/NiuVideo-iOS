@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
-#import "NVViewController.h"
+#import "NVBaseViewController.h"
 
-@interface NVLiveSettingSegmentViewController : NVViewController
+@interface NVLiveSettingSegmentViewController : NVBaseViewController
 
 @end

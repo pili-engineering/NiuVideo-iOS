@@ -1,5 +1,5 @@
 //
-//  NVViewController.h
+//  NVBaseViewController.h
 //  NiuVideo
 //
 //  Created by hxiongan on 2017/12/15.
@@ -22,7 +22,7 @@ typedef enum : NSUInteger {
     NVNavigationLeftItemTagBackToRoot,
 } NVNavigationLeftItemTag;
 
-@interface NVViewController : UIViewController
+@interface NVBaseViewController : UIViewController
 <
 UIViewControllerTransitioningDelegate
 >
@@ -47,13 +47,13 @@ UIViewControllerTransitioningDelegate
     用自定义交互的方式显示controller
     controller：将用自定义交互present的viewController
  */
-- (void)presentViewController:(NVViewController*)controller;
+- (void)presentViewController:(NVBaseViewController*)controller;
 
 @end
 
 
 
-@interface UIViewController (NVViewControllerCategory)
+@interface UIViewController (NVBaseViewControllerCategory)
 
 - (UIBarButtonItem*)spaceItem;
 - (void)setNavigationLeftItemBack;

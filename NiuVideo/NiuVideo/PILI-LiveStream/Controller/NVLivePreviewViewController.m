@@ -64,18 +64,12 @@ NVLiveToolBoxViewDelegate
     [self requsetPushURL];
     
     [self checkCameraAccess];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     [self setupSession];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
 
-    [self.streamSession.previewView removeFromSuperview];
-    [self.streamSession destroy];
-    self.streamSession = nil;
+    [self stopStream];
     
     [self hideView:self.coverView];
     [self showView:self.startLiveView];
@@ -239,7 +233,6 @@ NVLiveToolBoxViewDelegate
 }
 
 - (void)requsetPushURL {
-    //temp
     _streamURL = [NSURL URLWithString:@""];
 }
 

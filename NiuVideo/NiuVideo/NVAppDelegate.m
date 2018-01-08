@@ -28,7 +28,6 @@
     
     [self.window makeKeyAndVisible];
     
-    //ahx add init env
     [PLStreamingEnv initEnv];
     
     return YES;

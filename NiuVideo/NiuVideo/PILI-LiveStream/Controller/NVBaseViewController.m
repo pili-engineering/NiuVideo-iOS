@@ -1,18 +1,18 @@
 //
-//  NVViewController.m
+//  NVBaseViewController.m
 //  NiuVideo
 //
 //  Created by hxiongan on 2017/12/15.
 //  Copyright © 2017年 Pili Engineering, Qiniu Inc. All rights reserved.
 //
 
-#import "NVViewController.h"
+#import "NVBaseViewController.h"
 
-@interface NVViewController ()
+@interface NVBaseViewController ()
 
 @end
 
-@implementation NVViewController
+@implementation NVBaseViewController
 
 - (void)dealloc {
 #ifdef DEBUG
@@ -93,8 +93,8 @@
         transitioningDelegate = vc.transitioningDelegate;
     }
     
-    if (transitioningDelegate && [transitioningDelegate isKindOfClass:[NVViewController class]]) {
-        [((NVViewController*)transitioningDelegate).percentDrivenInteractiveTransition enablePanInteraction];
+    if (transitioningDelegate && [transitioningDelegate isKindOfClass:[NVBaseViewController class]]) {
+        [((NVBaseViewController*)transitioningDelegate).percentDrivenInteractiveTransition enablePanInteraction];
     }
 }
 
@@ -107,12 +107,12 @@
         transitioningDelegate = vc.transitioningDelegate;
     }
     
-    if (transitioningDelegate && [transitioningDelegate isKindOfClass:[NVViewController class]]) {
-        [((NVViewController*)transitioningDelegate).percentDrivenInteractiveTransition disablePanInteraction];
+    if (transitioningDelegate && [transitioningDelegate isKindOfClass:[NVBaseViewController class]]) {
+        [((NVBaseViewController*)transitioningDelegate).percentDrivenInteractiveTransition disablePanInteraction];
     }
 }
 
-- (void)presentViewController:(NVViewController*)controller{
+- (void)presentViewController:(NVBaseViewController*)controller{
     
     controller.controllerShowMode   = NVControllerShowModePresent;
     
@@ -125,7 +125,7 @@
 @end
 
 
-@implementation UIViewController (NVViewControllerCategory)
+@implementation UIViewController (NVBaseViewControllerCategory)
 
 - (void)emptyNavitationItem{
     self.navigationItem.leftBarButtonItem   = nil;
